@@ -16,9 +16,6 @@ Password: se.nagios
 🧑‍💻 Acceso a interfaz web
 URL: http://ip-publica:8080/nagios
 
-Usuario: sergio_nagios
-Contraseña: se.nagios
-
 🔧 Variables utilizadas
 Variable	Valor
 NAGIOS_USER	SERGIO_NAGIOS
@@ -84,3 +81,22 @@ RUN echo "LoadModule cgi_module modules/mod_cgi.so" >> /etc/httpd/conf/httpd.con
 EXPOSE 80
 
 CMD ["/usr/sbin/httpd", "-DFOREGROUND"]
+
+## Sincronización con GitHub desde EC2
+
+La instancia EC2 fue configurada para autenticarse con GitHub mediante clave SSH.
+
+Desde EC2 se sincronizaron correctamente los siguientes archivos:
+
+- `Dockerfile`
+- `README.md`
+
+
+## 🌐 Acceso a la Consola de Nagios
+
+Para acceder a la interfaz web de Nagios desplegada en AWS, se puede hacer con el siguiente link (balanceador):
+
+🔗 [Haz clic aquí para acceder a Nagios](http://balanced-nagios-se-1192489430.us-east-1.elb.amazonaws.com/nagios)
+
+**Usuario:** `sergio_nagios`  
+**Contraseña:** `se.nagios`
