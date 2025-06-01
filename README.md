@@ -28,8 +28,7 @@ NAGIOS_WEB_PASS	se.nagios
 <br>
 
 # 📦 Dockerfile personalizado para Nagios sobre Amazon Linux 2
-
-
+___________________________________________________________________________________________________________
 FROM amazonlinux:2
 LABEL maintainer="se.estrada@duocuc.cl"
 LABEL version="1.0"
@@ -81,7 +80,7 @@ RUN echo "LoadModule cgi_module modules/mod_cgi.so" >> /etc/httpd/conf/httpd.con
 EXPOSE 80
 
 CMD ["/usr/sbin/httpd", "-DFOREGROUND"]
-
+____________________________________________________________________________________________________
 ## Sincronización con GitHub desde EC2
 
 La instancia EC2 fue configurada para autenticarse con GitHub mediante clave SSH.
